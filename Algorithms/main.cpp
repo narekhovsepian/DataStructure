@@ -1,9 +1,41 @@
 #include <iostream>
 //#include"BinaryTreeSearch.h"
-#include "Stack.h"
+//#include "Stack.h"
+#include"LinkedQueue.h"
+
+
 
 int main() {
 
+	adtLQ::LinkedQueue<int> p;
+
+	for (int i = 0; i < 10; i++)
+	{
+		p.enqueue_push(i);
+	}
+
+	p.print();
+	std::cout << "\n\n\n\n";
+	for (int i = 0; i < 10; ++i)
+	{
+		p.enqueue_push(rand() % 100);
+		std::cout << "\n\n\n\n";
+		std::cout << p.Front();
+	}
+	p.print();
+
+	std::cout << "\n\n\n\n";
+
+	adtLQ::LinkedQueue<int> q(p);
+	q.print();
+	
+	/*std::cout << "\n\n\n\n";
+	std::cout << p.Back();
+	std::cout << "\n\n\n\n";
+	std::cout << p.Front();
+	std::cout << "\n\n\n\n";
+	*/
+	/*
 	adt::Stack<int> b;
 	adt::Stack<char> c;
 
@@ -23,7 +55,7 @@ int main() {
 
 
 	std::cout << b.size() << "   " << c.size();
-
+	*/
 
 	/*
 		bts::BinaryTreeSearch<int> a;
